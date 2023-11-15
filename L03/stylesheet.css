@@ -455,7 +455,6 @@ ul {
   z-index: 1;
 }
 
-/* Add this style to format the individual mobile navigation items */
 .nav-links.active li {
   text-align: center;
   margin: 10px 0;
@@ -527,3 +526,14 @@ ul {
     color: #ff9900;
   }
 }
+@media screen and (max-width: 768px) {
+  .background-video {
+    display: none; /* Hide the video on smaller screens */
+  }
+
+  .big-rectangle-container {
+    background: url('images/image.png') center center no-repeat;
+    background-size: cover;
+  }
+}
+
