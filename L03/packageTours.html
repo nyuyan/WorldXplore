@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <title>Your Package Tour Website</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <button class="hamburger">&#9776;</button>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Package Tours</a>
+              <div class="dropdown-content">
+                <a href="packageTours.html">Popular Package</a>
+                <a href="#">Asia Package</a>
+                <a href="#">Other Countries</a>
+              </div>
+            </li>
+            <li><a href="ReSingapore.html">Rediscover Singapore</a></li>
+            <li><a href="#">Cruises</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+          <img src="logo.svg" alt="Your Logo" class="logo" />
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="filter-buttons">
+        <button id="showAllButton">Show All</button>
+        <button id="asiaButton">Asia</button>
+      </div>
+      <section class="package-tour" data-category="asia">
+        <img src="images/beijing.jpg" alt="Tour Image 1" />
+        <div class="tour-details">
+          <h2>Beijing Temple</h2>
+          <h3>Package: $2418</h3>
+          <p>
+            A temple with a long list of nicknames — Yonghe Temple, Yonghe
+            Lamasery, Yonghe Lama Temple, Harmony and Peace Palace Lamasery —
+            Lama Temple is one of the most popular temples in Beijing, right up
+            there with the Temple of Heaven. It was constructed in the late 17th
+            century as the royal court for then-prince Yongzheng. When Yongzheng
+            became emperor in 1722, the site gained imperial status, was
+            renamed, and became a palace that he could stay in when he wanted to
+            get away from the Forbidden City. The site went from palace to
+            temple once the emperor passed and a new dynasty began, though the
+            Chinese Civil War forced a 32-year closure until its reopening in
+            1981.
+          </p>
+          <a href="#" class="book-now-button">Book Now</a>
+        </div>
+      </section>
+
+      <section class="package-tour" data-category="asia">
+        <img src="images/bali.jpg" alt="Tour Image 2" />
+        <div class="tour-details">
+          <h1>Bali Indonesia</h1>
+          <h3>Package: $2838</h3>
+          <p>
+            Bali is best known for its stunning golden beaches lined with
+            swaying palm trees and blue-green waters, but this Indonesian island
+            has a lot more attractions to offer visitors. Not that the beaches
+            shouldn't top your must-visit list-the glorious stretches of sand at
+            laid-back Crystal Bay, the undeveloped White Sands Beach, or the
+            serene Sanur with its untouched village-feel are some of Bali's best
+            destinations.
+          </p>
+          <a href="#" class="book-now-button">Book Now</a>
+        </div>
+      </section>
+
+      <section class="package-tour" data-category="all">
+        <img src="images/tour.jpg" alt="Tour Image 3" />
+        <div class="tour-details">
+          <h1>The Maasai Mara National Reserve, Kenya</h1>
+          <h3>Package: $3949</h3>
+          <p>
+            The Massai Mara is one of the top 10 tourist attractions in Africa,
+            not just to see but experience the big 5 but because of the
+            wildebeest migration. Continuing through the Maasai Mara National
+            Reserve will lead you to the Serengeti National Park and Game
+            Reserves in Tanzania. There are many specialist tours of this
+            impressive nature reserve and with a variety of game viewing
+            experiences from regular overland vehicles to hot air balloons.
+          </p>
+          <a href="#" class="book-now-button">Book Now</a>
+        </div>
+      </section>
+
+      <section class="package-tour" data-category="all">
+        <img src="images/italy.jpg" alt="Tour Image 3" />
+        <div class="tour-details">
+          <h1>Colosseum - Rome, Italy</h1>
+          <h3>Package: $4909</h3>
+          <p>
+            The jewel of antiquity, the epitome of Roman Power, a masterpiece of
+            ancient world and a blend of good and the bad- Colosseum is one such
+            structure that makes us feel that we are lucky and we are not. An
+            ancient ground where gladiators fought for their life against wild
+            animals to entertain, Colosseum is one of the largest amphitheatres
+            of the world with a gigantic seating capacity of about 50,000
+            spectators.
+          </p>
+          <a href="#" class="book-now-button">Book Now</a>
+        </div>
+      </section>
+    </main>
+    <script>
+      document
+        .getElementById("showAllButton")
+        .addEventListener("click", function () {
+          filterPackages("all");
+        });
+
+      document
+        .getElementById("asiaButton")
+        .addEventListener("click", function () {
+          filterPackages("asia");
+        });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var hamburger = document.querySelector(".hamburger");
+        var navLinksMobile = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", function () {
+          navLinksMobile.classList.toggle("active");
+        });
+      });
+
+      function filterPackages(category) {
+        var packageTours = document.querySelectorAll(".package-tour");
+
+        packageTours.forEach(function (tour) {
+          var tourCategory = tour.getAttribute("data-category");
+
+          if (category === "all" || tourCategory === category) {
+            tour.style.display = "flex";
+          } else {
+            tour.style.display = "none";
+          }
+        });
+      }
+    </script>
+    <div class="footer">
+      <p>&copy; 2023 World Xplore. All rights reserved.</p>
+    </div>
+  </body>
+</html>

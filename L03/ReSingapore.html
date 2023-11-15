@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <title>Rediscover Singapore</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <button class="hamburger">&#9776;</button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Package Tours</a>
+                        <div class="dropdown-content">
+                            <a href="packageTours.html">Popular Package</a>
+                            <a href="#">Asia Package</a>
+                            <a href="#">Other Countries</a>
+                        </div>
+                    </li>
+                    <li><a href="ReSingapore.html">Rediscover Singapore</a></li>
+                    <li><a href="#">Cruises</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <img src="logo.svg" alt="Your Logo" class="logo">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="rediscover-singapore">
+            <div class="rediscover-text">
+                <h2>skyscrapers</h2>
+                <p>Immerse yourself in the vibrant culture, stunning landscapes, and rich history of Singapore. From modern skyscrapers to traditional neighborhoods, Singapore offers a unique blend of old and new.</p>
+                <p>Explore iconic landmarks, savor diverse cuisines, and experience the warmth of Singaporean hospitality.</p>
+                <a href="#" class="explore-button">Explore Now</a>
+            </div>
+            <img src="images/singapore.jpg" alt="Singapore Image">
+        </section>
+    </main>
+
+    <main>
+        <section class="rediscover-singapore">
+            <div class="rediscover-text">
+                <h2>Gardens by the Bay</h2>
+                <p>Discover the enchanting Gardens by the Bay, where nature meets cutting-edge technology. Marvel at the iconic Supertrees, which come alive with a dazzling display of light and sound in the evening.</p>
+                <p>Immerse yourself in the lush greenery of the Flower Dome and Cloud Forest, showcasing a diverse collection of plants from around the world. Gardens by the Bay offers a unique and futuristic oasis in the heart of Singapore.</p>
+                <a href="#" class="explore-button">Explore Now</a>
+            </div>
+            <img src="images/gardens.jpg" alt="Gardens by the Bay Image">
+        </section>
+    </main>
+    <div class="footer">
+        <p>&copy; 2023 World Xplore. All rights reserved.</p>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var hamburger = document.querySelector('.hamburger');
+            var navLinksMobile = document.querySelector('.nav-links');
+        
+            hamburger.addEventListener('click', function () {
+                navLinksMobile.classList.toggle('active');
+            });
+        });
+        
+        </script>
+
+</body>
+
+</html>
